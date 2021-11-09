@@ -9,7 +9,6 @@ const TextHighlight: FunctionComponent<TextHighlightProps> = ({ text, textHighli
   const highlightStartAt = useMemo(() => {
     return textHighlight.trim() ? text.toLowerCase().indexOf(textHighlight.toLowerCase().trim()) : -1
   }, [text, textHighlight])
-  console.log(highlightStartAt)
   return (
     <span>
       { highlightStartAt >= 0 ? (
